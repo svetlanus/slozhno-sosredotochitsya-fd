@@ -29,3 +29,13 @@
 :root.theme-dark .page .header .decoration-rec {
   display: flex;
 }
+
+:root.theme-dark .page .decorated-zone::before {
+  border-bottom: solid 1px var(--accent-color);
+  border-left: solid 1px var(--accent-color);
+}
+
+:root.theme-dark .page .decorated-zone::after {
+  border-top: solid 1px var(--accent-color);
+  border-right: solid 1px var(--accent-color);
+}

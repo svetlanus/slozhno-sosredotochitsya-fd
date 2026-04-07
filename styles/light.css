@@ -9,4 +9,67 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+ --accent-color: #ff8dcb;
+--title-color: #FFC2E6;
+--text-color-main:#353430;
+--text-color-headings:#353430;
+--background-color:#FFC2E6;
+--accent-color-navigation:#353430;
+--accent-color-nav-opacity:rgba(50, 49, 45, 0.4);
+}
+:root.theme-light .page  {  
+--background-image : url(../images/cover-image-light.png);
+}
+
+.theme-light .page .header .decoration-rec::after {
+  display: none;
+}
+.theme-light .page .header .decoration-rec {
+  display: none;
+}
+:root.theme-light .page .decorated-zone::before {
+  border-bottom: solid 1px var(--text-color-main);
+border-left: solid 1px var(--text-color-main);
+}
+:root.theme-light .page .decorated-zone::after {
+border-top: solid 1px var(--text-color-main);
+border-right: solid 1px var(--text-color-main);
+}
+:root.theme-light .page .header .header__theme-menu {
+color: var(--text-color-main);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+  --accent-color: #ff8dcb;
+  --title-color: #FFC2E6;
+  --text-color-main:#353430;
+  --text-color-headings:#353430;
+  --background-color:#FFC2E6;
+  --accent-color-navigation:#353430;
+  --accent-color-nav-opacity:rgba(50, 49, 45, 0.4);
+  }
+
+  .page {
+    --background-image : url(../images/cover-image-light.png);
+  }
+
+  .page .header .decoration-rec::after {
+    display: none;
+  }
+
+  .page .header .decoration-rec {
+    display: none;
+  }
+  .page .decorated-zone::before {
+    border-bottom: solid 1px var(--text-color-main);
+    border-left: solid 1px var(--text-color-main);
+  }
+ .page .decorated-zone::after {
+    border-top: solid 1px var(--text-color-main);
+    border-right: solid 1px var(--text-color-main);
+  }
+ .page .header .header__theme-menu {
+    color: var(--text-color-main);
+  }
 }

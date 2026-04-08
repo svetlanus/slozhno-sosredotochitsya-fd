@@ -10,32 +10,16 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 --accent-color: #FF0070;
---accent-color-navigation:#FF0070;
+--accent-color-variation:#FF0070;
 --accent-color-nav-opacity:rgba(255, 0, 112, .4);
 --title-color: #DB00FF;
 --text-color-main:#f1b2ce;
 --text-color-headings:#000028;
 --background-color:#000028;
+--decoration-rec-display: flex;
+--decoration-rec-dot-display:block;
 }
 
 :root.theme-dark .page {
   --background-image : url(../images/cover-image-dark.png);
-}
-
-:root.theme-dark .page .header .decoration-rec::after {
-  display: block;
-}
-
-:root.theme-dark .page .header .decoration-rec {
-  display: flex;
-}
-
-:root.theme-dark .page .decorated-zone::before {
-  border-bottom: solid 1px var(--accent-color);
-  border-left: solid 1px var(--accent-color);
-}
-
-:root.theme-dark .page .decorated-zone::after {
-  border-top: solid 1px var(--accent-color);
-  border-right: solid 1px var(--accent-color);
 }

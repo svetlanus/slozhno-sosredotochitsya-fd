@@ -31,8 +31,8 @@ bottom: var(--padding__decorated-zone);
 width: 25px;
 height: 25px;
 border: none;
-border-bottom: solid 1px var(--accent-color);
-border-left: solid 1px var(--accent-color);
+border-bottom: solid 1px var(--accent-color-variation);
+border-left: solid 1px var(--accent-color-variation);
 z-index: 1
 
 }
@@ -46,15 +46,15 @@ top: var(--padding__decorated-zone);
 width: 25px;
 height: 25px;
 border: none;
-border-top: solid 1px var(--accent-color);
-border-right: solid 1px var(--accent-color);
+border-top: solid 1px var(--accent-color-variation);
+border-right: solid 1px var(--accent-color-variation);
 z-index: 1
 }
 
 .decoration-rec {
 position: absolute;
 right: calc(var(--padding__decorated-zone) + 9px);
-display: flex;
+display: var(--decoration-rec-display);
 align-items: baseline;
 gap: 10px;
 color: var(--accent-color);
@@ -65,7 +65,7 @@ margin-top: var(--padding__decorated-zone);
 }
 
 .decoration-rec::after {
-display: block;
+display: var(--decoration-rec-dot-display);
 content: '';
 width: 9px;
 height: 9px;
@@ -77,7 +77,7 @@ box-shadow:0 0 4px 2px var(--accent-color);
 .header__theme-menu {
 justify-self:end;
 align-self: center;
-color: var(--accent-color-navigation);
+color: var(--accent-color-variation);
 }
 
 .header__theme-menu-list {
@@ -95,7 +95,7 @@ font-size: 18px;
 line-height: 100%;
 text-align: center;
 text-transform: lowercase;
-color: var(--accent-color-navigation);
+color: var(--accent-color-variation);
 cursor: pointer;
 }
 
@@ -109,13 +109,13 @@ outline: none;
 }
 
 .header__theme-menu-button_active {
-border: solid 1px var(--accent-color-navigation);
+border: solid 1px var(--accent-color-variation);
 pointer-events: none;
 }
 
 .header__theme-menu-button:focus-visible {
 outline: none;
-border-bottom: solid 1px var(--accent-color-navigation);
+border-bottom: solid 1px var(--accent-color-variation);
 }
 
 .main-title {
@@ -162,6 +162,12 @@ justify-content: start;
 align-items:start;
 }
 
+.section__heading {
+color: var(--accent-color-variation);
+font-weight: 700;
+font-size: 18px;
+}
+
 .card-list {
 list-style-type: none;
 
@@ -169,12 +175,6 @@ list-style-type: none;
 
 .card:not(:last-child) {
 padding-bottom: 20px;
-}
-
-.section__heading {
-color: var(--accent-color);
-font-weight: 700;
-font-size: 18px;
 }
 
 .card {
